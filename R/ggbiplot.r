@@ -162,7 +162,7 @@ ggbiplot <- function(pcobj, choices = 1:2, scale = 1, pc.biplot = TRUE,
       geom_segment(data = df.v,
                    aes(x = 0, y = 0, xend = xvar, yend = yvar),
                    arrow = arrow(length = unit(1/2, 'picas')), 
-                   color = muted('red'))
+                   color = muted('black'))
   }
 
   # Draw either labels or points
@@ -206,7 +206,7 @@ ggbiplot <- function(pcobj, choices = 1:2, scale = 1, pc.biplot = TRUE,
     geom_text(data = df.v, 
               aes(label = varname, x = xvar, y = yvar, 
                   angle = angle, hjust = hjust), 
-              color = 'darkred', size = varname.size)
+              color = 'black', size = varname.size, fontface="bold")
   }
   # Change the name of the legend for groups
   # if(!is.null(groups)) {
